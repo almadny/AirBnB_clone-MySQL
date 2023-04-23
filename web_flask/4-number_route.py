@@ -36,10 +36,10 @@ def pythondisplayPage(text):
     return "Python {}".format(text.replace('_', ' '))
 
 
-@app.route('/number/<int:n>', strict_slashes=False)
-def numdisplayPage(n):
-    """ Define a dyamic page created with a number sent as url parameter """
-    return f"{n} is a number"
+@app.route("/number/<int:n>", strict_slashes=False)
+def numDisplay(n):
+    """ Define a dyamic page """
+    return "{} is a number".format(n)
 
 
 if __name__ == "__main__":
