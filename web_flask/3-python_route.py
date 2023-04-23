@@ -22,17 +22,10 @@ def cdisplayPage(text):
     return "C {}".format(text.replace('_', ' '))
 
 
-@app.route('/python', strict_slashes=False)
-def pythonDefault():
-    """ Define Python page """
-    return "Python is cool"
-
-
+@app.route("/python", strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
-def pythondisplayPage(text):
+def pythondisplayPage(text="is cool"):
     """ Define python page """
-    if not text:
-        return redirect(url_for('/python'))
     return "Python {}".format(text.replace('_', ' '))
 
 
