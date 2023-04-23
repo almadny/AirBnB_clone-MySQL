@@ -52,9 +52,9 @@ def numberTemplateView(n):
 def oddEvenTemplateView(n):
     """ Define a dyamic page """
     if n % 2 == 0:
-        text = f"{n} is even"
+        text = "{} is even".format(n)
     else:
-        text = f"{n} is odd"
+        text = "{} is odd".format(n)
     return render_template('6-number_odd_or_even.html', odd_or_even=text)
 
 
